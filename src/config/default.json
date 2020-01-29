@@ -1,6 +1,6 @@
 {
-    "UnsplashUrl": "https://api.unsplash.com/photos/?client_id=cf49c08b444ff4cb9e4d126b7e9f7513ba1ee58de7906e4360afc1a33d1bf4c0",
-    "headers": {
-        "Accept-Version": "v1"
-    }
+    "TheMovieDBUrl": "https://api.themoviedb.org/3/list/180?api_key=351df72cd576c0725132467f1889a666&language=en-US",
+    "urlImagesSizeW200": "https://image.tmdb.org/t/p/w200/",
+    "urlImagesSizeW300": "https://image.tmdb.org/t/p/w300/"
 }
+

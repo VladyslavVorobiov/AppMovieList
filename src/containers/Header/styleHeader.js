@@ -2,23 +2,20 @@ import { StyleSheet } from 'react-native';
 
 const style = StyleSheet.create({
     container:{
-        height: 110,
+        height: 80,
         flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#30d0fe",
-        shadowColor: "#000",
-        shadowOffset: {width:0, height: 5},
-        shadowOpacity: 0.3,
+        alignItems: "flex-end",
+        justifyContent: "flex-start",
+        backgroundColor: "#fff",
+        paddingLeft: 25
     },
     textStyle:{
-        color: "#fff",
-        fontSize: 40,
-        fontFamily: "Verdana",
+        color: "#000",
+        fontSize: 25,
+        fontFamily: "Arial",
         marginBottom: 2,
-        shadowColor: "#000",
-        shadowOffset: {width:0, height: 5},
-        shadowOpacity: 0.3,
+        fontWeight: "bold",
+        textTransform: "uppercase"
     }
 });
 

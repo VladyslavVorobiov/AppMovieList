@@ -1,27 +1,59 @@
-import React, {useContext} from 'react';
-import { Text, View, Image, Alert, TouchableOpacity } from 'react-native';
+import React, {useContext, useCallback} from 'react';
+import { Text, View, Image, TouchableOpacity, ImageBackground} from 'react-native';
 import style from './styleCard';
 import Context from '../../context/context';
+import { urlImagesSizeW200 } from '../../config/default.json';
 
 const Card = (props) => {
-  const { navigate, setParams } = useContext(Context);
+  const { navigate } = useContext(Context);
     
   return (
       <View style={style.container}>
-        <TouchableOpacity onPress={ () => {
-           // setParams({ imageSourceFull: props.imageSourceFull });
-            navigate('Details', { imageSourceFull: props.imageSourceFull });
+        <TouchableOpacity 
+          onPress={ useCallback( () => {
+              navigate('Details', { movieInfo: props.movieInfo });
+            },[])
           }
-        }>
-          <Image
-            style={style.image}
-            source={{uri: props.imageSourceSmall}}
-          />
+        >
+          <ImageBackground 
+            source={{uri: urlImagesSizeW200 + props.imageSource}}
+            style={style.styleImageBackground}
+          >
+            <View style={style.containerText}>
+              <Text style={style.textTitle}>{props.originalTitle || "No Title"} </Text>
+              <Text style={style.textYear}>{ parseInt(props.releaseDate, 10) || "No Year"} </Text>
+            </View>
+          </ImageBackground>
+          
+
         </TouchableOpacity>
-        <Text style={style.textDescription}>{props.description || "No description"} </Text>
-        <Text style={style.textAuthor}>{props.authorName || "No author"} </Text>
+        
       </View>
     );
 }
 
 export default Card;
+       /*
+       
+      */
+/*
+return (
+      <View style={style.container}>
+        <TouchableOpacity 
+          onPress={ useCallback( () => {
+              navigate('Details', { movieInfo: props.movieInfo });
+            },[])
+          }
+        >
+          <Image
+            style={style.image}
+            source={{uri: urlImagesSizeW200 + props.imageSource}}
+          />
+        </TouchableOpacity>
+        <View style={style.containerText}>
+          <Text style={style.textTitle}>{props.originalTitle || "No Title"} </Text>
+          <Text style={style.textYear}>{props.releaseDate || "No Year"} </Text>
+        </View>
+      </View>
+    );
+*/

@@ -1,7 +1,7 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
 import {FETCH_DATA} from '../store/actions/actionTypes';
 import {getDataHasError, dataIsLoading, getDataHasSuccess } from '../store/actions/actionCreators';
-import { UnsplashUrl as url, headers } from '../config/default.json';
+import { TheMovieDBUrl as url} from '../config/default.json';
 import {fetchData} from '../functions/http';
 import { Alert } from 'react-native';
 
@@ -9,7 +9,7 @@ function* fetchDataAsync() {
     try {
       yield put( dataIsLoading() );
 
-      const data = yield call( fetchData, url, 'GET', headers);
+      const data = yield call( fetchData, url, 'GET');
       yield put(getDataHasSuccess(data));
     } catch (error) {
       //TODO error handling

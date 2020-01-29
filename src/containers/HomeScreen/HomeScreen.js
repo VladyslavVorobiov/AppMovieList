@@ -15,7 +15,7 @@ const HomeScreen = (props) => {
         navigate, setParams
     }}>
         <React.Fragment>
-            <Header title={"Images"}/>
+            <Header title={"Movies"}/>
             <CardListWithScroll />
         </React.Fragment>
     </Context.Provider>

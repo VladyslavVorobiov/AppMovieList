@@ -23,7 +23,7 @@ export function dataIsLoading(){
 export function getDataHasSuccess(data){
 	return{
 		type: GETTING_DATA_HAS_SUCCESS,
-		dataFromUnsplash: data
+		dataFromTheMovieDB: data
 	}
 }
 

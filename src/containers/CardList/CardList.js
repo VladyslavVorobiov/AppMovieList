@@ -8,8 +8,6 @@ import {connect} from 'react-redux';
 import { fetchData } from '../../store/actions/actionCreators';
 
 const CardList = (props) => {
-  const [isDataRecieved, setIsDataRecieved] = useState(false);
-  let data = [];
 
   useEffect( () => {
       props.fetchData();
@@ -26,16 +24,17 @@ const CardList = (props) => {
   );
 
   function renderCards(){
-    let data = props.dataFromUnsplash.concat();
+    let dataItems = props.dataFromTheMovieDB.items.concat();
   
-    return data.map((item,index) => {
+    return dataItems.map((item,index) => {
       return(
         <Card
+          movieInfo = {item}
           key = {item.id}
-          imageSourceSmall = {item.urls.small}
-          imageSourceFull = {item.urls.full}
-          description = {item.description}
-          authorName = {item.user.name}
+          imageSource = {item.poster_path}
+          originalTitle = {item.original_title}
+          releaseDate = {item.release_date}
+          overview = {item.overview}
         />
       );
     });
@@ -44,7 +43,7 @@ const CardList = (props) => {
 
 function mapStateToProps(state){
 	return{
-		dataFromUnsplash: state.cardList.dataFromUnsplash,
+		dataFromTheMovieDB: state.cardList.dataFromTheMovieDB,
 		hasErrored: state.cardList.hasErrored,
     isLoading: state.cardList.isLoading,
 		isDataRecieved: state.cardList.isDataRecieved

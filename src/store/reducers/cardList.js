@@ -5,7 +5,7 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-    dataFromUnsplash: [],
+    dataFromTheMovieDB: {},
     isLoading: false,
     hasErrored: false,
     isDataRecieved: false
@@ -24,7 +24,7 @@ export default function cardListReducer(state = initialState, action){
         case GETTING_DATA_HAS_SUCCESS:
             return{
                 ...state, 
-                dataFromUnsplash: action.dataFromUnsplash, 
+                dataFromTheMovieDB: action.dataFromTheMovieDB, 
                 isDataRecieved: true,
                 isLoading: false,
                 hasErrored: false

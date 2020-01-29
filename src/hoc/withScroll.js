@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 
-const withScroll = Component => () => {
+const withScroll = Component => (props) => {
     return(
         <SafeAreaView style={styles.container}>
             <ScrollView style={styles.scrollView}>
-                <Component {...this.props}/>
+                <Component {...props}/>
             </ScrollView>
         </SafeAreaView> 
     );
