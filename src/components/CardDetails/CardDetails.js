@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import style from './styleCardDetails';
-import { TheMovieDBUrl,urlImagesSizeW300,urlImagesSizeW200, apiKey } from '../../config/default.json';
+import { TheMovieDBUrl, urlImagesSizeW300,urlImagesSizeW200, apiKey } from '../../config/default.json';
 import withScroll from '../../hoc/withScroll';
 import {fetchData} from '../../functions/http';
 
@@ -63,7 +63,7 @@ const CardDetails = (props) => {
       return data.results.map((item,index) => {
         return(
           <View 
-            key = {item.id} containerSimilarMovies
+            key = {item.id}
             style={style.containerSimilarMovies}
           >
               <Image 
