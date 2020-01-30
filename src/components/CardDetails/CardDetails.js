@@ -66,8 +66,7 @@ const CardDetails = (props) => {
             key = {item.id}
             style={style.containerSimilarMovies}
           >
-              <Image 
-                
+              <Image
                 style={style.imageSimilarMovie}
                 source={{uri: urlImagesSizeW200 + item.poster_path}}
               />
