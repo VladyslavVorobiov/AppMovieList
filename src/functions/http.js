@@ -1,4 +1,4 @@
-export async function fetchData(url, method, headers){
+export async function fetchData(url, method, headers = ""){
     try {
         
         const response = await fetch(url, { method, headers });
@@ -7,7 +7,7 @@ export async function fetchData(url, method, headers){
             throw new Error( "Error HTTP: " + response.status);
         }
         const data = await response.json();
-        //console.log(data.length);
+        //console.log(data);
         return data;
 
     } catch (error) {
