@@ -1,8 +1,8 @@
 {
     "TheMovieDBUrl": "https://api.themoviedb.org/3/",
-    "getListMovies": "list/180?api_key=351df72cd576c0725132467f1889a666&language=en-US",
+    "getListMovies": "list/180?api_key=<key>=en-US",
     "urlImagesSizeW200": "https://image.tmdb.org/t/p/w200/",
     "urlImagesSizeW300": "https://image.tmdb.org/t/p/w300/",
-    "apiKey":"api_key=351df72cd576c0725132467f1889a666"
+    "apiKey":"api_key=<key>
 }
 
