@@ -1,6 +1,7 @@
 # AppMovieList
 
-This is my code for App to get movie list from the MovieDB. I used ReactJS, React Native, Redux.
+This is my code for creating mobile App for iOS. You can view movie list from the MovieDB. 
+I used ReactJS, React Native, Redux.
 
 Files index.js, App.js, files in folder "/src" are the main code.
 
